@@ -13,6 +13,7 @@ class WeatherModel {
   final sunrise;
   final sunset;
   final icon;
+  final country;
 
   double get getTemp => temp - 272.5;
   double get getFeelsLike => feels_like - 272.5;
@@ -43,6 +44,7 @@ class WeatherModel {
     this.sunrise,
     this.sunset,
     this.icon,
+    this.country,
   );
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
@@ -61,6 +63,7 @@ class WeatherModel {
       json["sys"]["sunrise"],
       json["sys"]["sunset"],
       json["weather"][0]["icon"],
+      json["sys"]["country"],
     );
   }
 }

@@ -212,7 +212,9 @@ class MyWeatherWidget extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  weather.name.toString() + ",IN",
+                                  weather.name.toString() +
+                                      ", " +
+                                      weather.country.toString(),
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 20),
                                 ),
